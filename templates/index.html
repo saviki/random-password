@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password</title>
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+
+</head>
+<body>  
+    {%block body%}  
+    <div>
+
+        <form action="/genarated" method="post">
+
+            <fieldset>
+            <legend>Password Genarater</legend>
+        
+            <br><input type="text" id="pass" value={{password}}><br><br>
+            
+            <label for="upper">Upper Letters</label>
+            <input type="checkbox" id="upper" name="upper" checked="true"><br>
+
+            <label for="lower">Lower Letters</label>
+            <input type="checkbox" id="lower" name="lower" checked="true"><br>
+
+            <label for="num">Numbers</label>
+            <input type="checkbox" id="num" name="num" checked="true"><br>
+
+            <label for="symbols">Symbols</label>
+            <input type="checkbox" id="symbols" name="symbols" checked="true"><br>
+
+            <label for="length">Length</label>
+            1<input type="range" id="length" name="length" step="1" value="10" min="1" max="50">50<br><br>
+            
+            <input type="submit" id="submit"  value="Genarate"><br><br>
+
+            </fieldset>
+
+        </form>
+    </div>
+
+    {%endblock%}
+</body>
+</html>
