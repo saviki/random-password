@@ -15,6 +15,7 @@ def index():
 def genarated():
     password = ""
 
+    # call to password generator()
     if request.method == 'POST':
         have_upper = True if request.form.get("upper") == "on" else False
         have_lower = True if request.form.get("lower") == "on" else False
@@ -28,4 +29,4 @@ def genarated():
     return render_template("index.html", password=password)
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run(debug = False)

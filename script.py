@@ -4,11 +4,13 @@ import string
 
 def generator(length=10, have_upper=True, have_lower=True, have_numbers=True, have_symbols=True):
 
+    # character list
     upper_letters = string.ascii_uppercase
     lower_letters = string.ascii_lowercase
     numbers = string.digits
     symbols = "!@#$%^&*"
 
+    # set is for shuffle chars in final password
     password = set()
     count = 1
 
@@ -30,6 +32,7 @@ def generator(length=10, have_upper=True, have_lower=True, have_numbers=True, ha
             password.add(random.choice(symbols))
             count += 1
 
+    # turn set in to the string
     return "".join(password)
 
 
