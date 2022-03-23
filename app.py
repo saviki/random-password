@@ -29,4 +29,5 @@ def genarated():
     return render_template("index.html", password=password)
 
 if __name__ == "__main__":
+    # to share debug should false
     app.run(debug = False)
